@@ -1,0 +1,16 @@
+{
+  "name": "shotta",
+  "version": "1.0.0",
+  "description": "Um chat simples de uso local",
+  "main": "server/index.js",
+
+  "scripts": {
+    "dev": "node ."
+  },
+  "author": "matheustorsani",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.35",
+    "ws": "^8.18.3"
+  }
+}
