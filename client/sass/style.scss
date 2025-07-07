@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -67,6 +68,15 @@ body {
         border-radius: 0.5rem;
         padding: 1rem;
         margin-bottom: 1rem;
+
+        .msg-send{
+            background: var(--boxtext);
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
     }
 
     .input{
