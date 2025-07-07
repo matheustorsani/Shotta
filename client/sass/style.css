@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo: #9260fa;
+  --fundotutao: #512ff0;
+  --letras: #3e0877;
+  --boxtext: #7247f5;
+}
+
+.header {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.header .title {
+  margin: 2rem 0;
+  font-size: 3rem;
+  color: var(--letras);
+}
+
+.textbox {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  transition: ease 0.4s;
+  background: var(--boxtext);
+  color: var(--letras);
+}
+.textbox::-moz-placeholder {
+  color: #fff;
+}
+.textbox::placeholder {
+  color: #fff;
+}
+.textbox:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+body {
+  width: 100%;
+  background: var(--fundotutao);
+}
+
+.chat {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.chat .titlechat {
+  font-size: 2rem;
+  color: var(--letras);
+}
+.chat .messages {
+  height: 25rem;
+  width: 40rem;
+  overflow-y: auto;
+  background: var(--fundo);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.chat .input {
+  align-self: center;
+}
+.chat .input .button {
+  background: var(--fundo);
+  color: var(--letras);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: ease 0.4s;
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.chat .input .button:hover {
+  background: var(--boxtext);
+  transform: scale(1.05);
+}/*# sourceMappingURL=style.css.map */
