@@ -17,18 +17,13 @@
     <div class="chat">
         <h2 class="titlechat">Chat</h2>
 
-        <div class="messages">
-            <div class="msg-send" id="message-template" style="display: none;">
-                <span class="username-text"></span>: <span class="text"></span>
-            </div>
-        </div>
+        <div class="messages"></div>
 
         <div class="input">
-            <input type="text" id="message" placeholder="Digite sua mensagem" class="textbox">
-            <button id="send" class="button" onclick="criarMsg()">Enviar</button>
+            <input type="text" id="message" placeholder="Digite sua mensagem" class="textbox" autocomplete="off">
+            <button id="send" class="button" onclick="sendMessage()">Enviar</button>
         </div>
     </div>
 </body>
 <script src="./script.js"></script>
-
 </html>

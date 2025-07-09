@@ -1,26 +1,19 @@
+const socket = new WebSocket("ws://localhost:3000");
 
+socket.onmessage = (event) => {
+    const { user, message } = JSON.parse(event.data);
+    const msgBox = document.getElementsByClassName("messages")[0];
+    msgBox.innerHTML += `<div class="msg-send" id="message-template">
+                <span class="username-text">${user}</span>: <span class="text">${message}</span>
+            </div>`;
+    msgBox.scrollTop = msgBox.scrollHeight;
+};
 
-const msg = document.querySelector(".text")
-const nomeMsg = document.querySelector(".username-text")
+function sendMessage() {
+    const user = document.getElementById("username").value.trim();
+    const message = document.getElementById("message").value.trim();
+    if (!user || !message) return;
 
-function criarMsg(){
-    const nome = document.getElementById("username").value;
-    const msgEsc = document.getElementById("message").value;
-
-    if (!nome || !msgEsc) return;
-
-    const mensagem = {
-        nome: nome,
-        message: msgEsc
-    };
-
-    const template = document.getElementById("message-template");
-    const novaMsg = template.cloneNode(true);
-    novaMsg.style.display = "block";
-    
-    novaMsg.querySelector(".username-text").textContent = mensagem.nome;
-    novaMsg.querySelector(".text").textContent = mensagem.message;
-
-    document.querySelector(".messages").appendChild(novaMsg);
+    socket.send(JSON.stringify({ user, message }));
     document.getElementById("message").value = "";
 }
